@@ -10,7 +10,7 @@ namespace ConsoleApp1
 {
 	
 
-	public class BinaryTree
+	public class BinaryTree // Задание на бинарное дерево (6)
 	{
 		public BinaryTree left;
 		public BinaryTree right;
@@ -83,7 +83,7 @@ namespace ConsoleApp1
 				else return left.Find(n);
 			}
 		}
-		public int HorizontalSearch()
+		public int HorizontalSearch()// Горизонтальный обход и поиск минимального листа,задание 5
 		{
 			int min = int.MaxValue;
 			Queue<BinaryTree> queue = new Queue<BinaryTree>();
@@ -101,7 +101,7 @@ namespace ConsoleApp1
 				if (elem.right != null) queue?.Enqueue(elem.right);
 			}
 			return min;
-		}
+		} 
 
 		public void Delete(int n)
 		{
@@ -148,7 +148,7 @@ namespace ConsoleApp1
 		
 	}
 	
-	public class HashTable
+	public class HashTable // Задание на хэш таблицу  номер 7(не доделано)
 	{
 		public class HashItem
 		{
@@ -226,7 +226,7 @@ namespace ConsoleApp1
 		{
 			name = Name; temperature = Temperature;
 		}
-	}
+	} // Задание номер 8 про Атомную станцию
 	class AtomicStation
 	{
 		
@@ -275,34 +275,7 @@ namespace ConsoleApp1
 	{
 		static class QuickSortClass
 		{
-			static string FiveOne(string s)
-			{
-			string temp = "";
-
-				for (int i = 0; i < s.Length; i++)
-				{
-					temp = s[i] + temp;
-			    }
-			return temp.Trim();
-		} //5
-		public static string StrVerse(string s)
-		{
-			string result = "";
-			string temp = "";
-			for (int i = 0; i < s.Length; i++)
-			{
-				if (s[i] != ' ')
-					temp += s[i];
-				if (s[i] == ' ')
-				{
-					result = temp + " " + result;
-					temp = "";
-				}
-			}
-			result = temp + " " + result;
-			return result;
-
-		}  //8
+			
 		public static void QuickSort(int[] arr) //12
 		{
 			QuickSort(arr, 0, arr.Length - 1);		
@@ -373,7 +346,34 @@ namespace ConsoleApp1
 		} }
 
 		
-		
+		static string FiveOne(string s) // Методичка 5.1
+			{
+			string temp = "";
+
+				for (int i = 0; i < s.Length; i++)
+				{
+					temp = s[i] + temp;
+			    }
+			return temp.Trim();
+		} //5
+		public static string StrVerse(string s) //Методичка 8.7
+		{
+			string result = "";
+			string temp = "";
+			for (int i = 0; i < s.Length; i++)
+			{
+				if (s[i] != ' ')
+					temp += s[i];
+				if (s[i] == ' ')
+				{
+					result = temp + " " + result;
+					temp = "";
+				}
+			}
+			result = temp + " " + result;
+			return result;
+
+		}  //8
 		public static void Main(string[] args)
 		{
 
@@ -437,8 +437,8 @@ namespace ConsoleApp1
 		}
 	}
 
-	public class Node
-	{
+	public class Node //Задание на список номер 2 + из методички
+	{ 
 		
 		public int Data;
 		public Node Nextnode;
